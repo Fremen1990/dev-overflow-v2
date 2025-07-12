@@ -1,6 +1,6 @@
 # DevOverflow
 
-![DevOverflow Logo](/public/next.svg)
+![DevOverflow Logo](/public/images/logo-dark.svg)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/DevOverflow-Org/DevOverflow?style=social)](
 
