@@ -8,7 +8,7 @@ describe('Home Page Component', () => {
         render(<Home/>)
         const heading = screen.getByRole('heading', {
             level: 1,
-            name: /Tests with Vitest and React Testing Library are working!/i
+            name: /Home page is here!/i
         });
         expect(heading).toBeDefined();
     });

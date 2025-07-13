@@ -3,14 +3,7 @@ import {Geist, Geist_Mono as GeistMono} from "next/font/google";
 import type {Metadata} from "next";
 
 import "./globals.css";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
+import Navbar from "@/components/navigation/navbar";
 import ThemeProvider from "@/context/Theme";
 
 const geistSans = Geist({
@@ -43,16 +36,7 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
         <ThemeProvider>
-            <DropdownMenu>
-                <DropdownMenuTrigger>Toggle Theme</DropdownMenuTrigger>
-                <DropdownMenuContent>
-                    <DropdownMenuLabel>Theme</DropdownMenuLabel>
-                    <DropdownMenuSeparator/>
-                    <DropdownMenuItem>Dark</DropdownMenuItem>
-                    <DropdownMenuItem>Light</DropdownMenuItem>
-                </DropdownMenuContent>
-            </DropdownMenu>
-
+            <Navbar/>
             {children}</ThemeProvider>
         </body>
         </html>

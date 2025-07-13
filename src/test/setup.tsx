@@ -49,7 +49,7 @@ vi.mock('next-themes', () => ({
         setTheme: vi.fn(),
         resolvedTheme: 'light',
         themes: ['light', 'dark', 'system'],
-        systemTheme: 'light',
+        systemTheme: 'dark',
     }),
 }))
 
@@ -62,3 +62,5 @@ beforeAll(() => {
 afterEach(() => {
     cleanup()
 })
+
+export {default as userEvent} from '@testing-library/user-event';

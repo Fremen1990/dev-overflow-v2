@@ -21,7 +21,9 @@ export default defineConfig({
             reporter: ['text', 'json', 'html'],
             include: ['src/**/*.{ts,tsx}'],
             exclude: [
+                'src/components/ui/**',
                 'node_modules/**',
+                'src/lib/utils.ts',
                 '**/*.d.ts',
                 '**/*.config.*',
                 '**/coverage/**',
