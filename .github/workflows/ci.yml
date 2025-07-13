@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop, feature/*, bugfix/*, hotfix/*, release/* ]
+  pull_request:
+    branches: [ main, develop, feature/*, bugfix/*, hotfix/*, release/* ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.0
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run linter
+        run: bun lint
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.0
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run tests
+        run: bun test:coverage
