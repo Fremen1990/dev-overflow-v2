@@ -1,9 +1,16 @@
+import {codecovVitePlugin} from "@codecov/vite-plugin";
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import {defineConfig} from 'vitest/config'
 
 export default defineConfig({
-    plugins: [tsconfigPaths(), react()],
+    plugins: [tsconfigPaths(), react(),
+        codecovVitePlugin({
+            enableBundleAnalysis: process.env.CODECOV_TOKEN !== undefined,
+            bundleName: "dev-overflow-v2",
+            uploadToken: process.env.CODECOV_TOKEN,
+        }),
+    ],
     test: {
         environment: 'jsdom',
         globals: true,

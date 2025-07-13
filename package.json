@@ -1,5 +1,5 @@
 {
-  "name": "dev-overflow",
+  "name": "dev-overflow-v2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -27,6 +27,7 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
+    "@codecov/vite-plugin": "^1.9.1",
     "@eslint/eslintrc": "^3",
     "@eslint/js": "^9.31.0",
     "@tailwindcss/postcss": "^4.1.11",
