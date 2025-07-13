@@ -1,9 +1,9 @@
 export default function Home() {
     return (
-        <>
+        <div>
             <h1 className={`h1-bold`}>
-                Tailwind CSS v4 with Next.js 15 is ready!
+                Tests with Vitest and React Testing Library are working!
             </h1>
-        </>
+        </div>
     )
 }

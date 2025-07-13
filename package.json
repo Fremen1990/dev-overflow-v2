@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:run": "bunx vitest run",
+    "test:ui": "bunx vitest --ui",
+    "test:coverage": "bunx vitest --coverage"
   },
   "dependencies": {
     "next": "15.3.5",
@@ -16,18 +19,26 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@eslint/js": "^9.31.0",
-    "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.16",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.6.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
     "eslint-config-prettier": "^10.1.5",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-better-tailwindcss": "^3.5.2",
     "eslint-plugin-tailwindcss": "^3.18.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "jsdom": "^26.1.0",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
   }
 }

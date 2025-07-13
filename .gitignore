@@ -12,6 +12,9 @@
 
 # testing
 /coverage
+vitest-ui/
+.nyc_output/
+
 
 # next.js
 /.next/

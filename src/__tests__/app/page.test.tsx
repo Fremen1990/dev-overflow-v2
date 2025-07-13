@@ -1,0 +1,15 @@
+import {render, screen} from '@testing-library/react';
+import {describe, expect, it} from 'vitest'
+
+import Home from "@/app/page";
+
+describe('Home Page Component', () => {
+    it('renders the heading with correct text', () => {
+        render(<Home/>)
+        const heading = screen.getByRole('heading', {
+            level: 1,
+            name: /Tests with Vitest and React Testing Library are working!/i
+        });
+        expect(heading).toBeDefined();
+    });
+})
