@@ -34,10 +34,23 @@ vi.mock('next/navigation', () => ({
 
 // Mock Next.js Image component
 vi.mock('next/image', () => ({
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     default: ({src, alt, ...props}: any) => (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={src} alt={alt} {...props} />
     ),
+}))
+
+// MOCK NEXT-THEMES - Essential for theme provider testing
+vi.mock('next-themes', () => ({
+    ThemeProvider: ({children}: { children: React.ReactNode }) => children,
+    useTheme: () => ({
+        theme: 'light',
+        setTheme: vi.fn(),
+        resolvedTheme: 'light',
+        themes: ['light', 'dark', 'system'],
+        systemTheme: 'light',
+    }),
 }))
 
 // Global test setup
