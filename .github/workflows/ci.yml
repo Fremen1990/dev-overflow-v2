@@ -47,4 +47,4 @@ jobs:
           name: coverage-report
           files: /coverage
         env:
-          CODECOV_TOKEN: ${{ secrets.TEST_COVERAGE_ARTIFACT_UPLOAD }}
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
