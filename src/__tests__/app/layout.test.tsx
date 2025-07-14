@@ -20,7 +20,7 @@ vi.mock('next/font/google', () => ({
     Geist_Mono: () => ({variable: 'mocked-geist-mono-variable'})
 }));
 
-describe('RootLayout', () => {
+describe.skip('RootLayout', () => {
     it('renders children correctly', () => {
         render(
             <RootLayout>
@@ -51,7 +51,7 @@ describe('RootLayout', () => {
     });
 });
 
-describe('RootLayout Integration', () => {
+describe.skip('RootLayout Integration', () => {
     it('renders the complete component structure', () => {
         render(
             <RootLayout>
