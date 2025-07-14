@@ -38,7 +38,11 @@ export default async function Home() {
             <h2>email: {session?.user?.email}</h2>
             <h2>expires: {session?.expires}</h2>
             {/* <Image src={session?.user?.image}/> */}
-            <img src={session?.user?.image} alt=""/>
+            {
+                session?.user?.image && (
+                    <img src={session?.user?.image} alt=""/>
+                )
+            }
 
             {session && (
                 <form action={handleSignOut}>
