@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import {describe, expect, it} from 'vitest'
 
-import Home from "@/app/page";
+import Home from "@/app/(root)/page";
 
 describe('Home Page Component', () => {
     it('renders the heading with correct text', () => {

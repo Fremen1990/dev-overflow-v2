@@ -63,11 +63,6 @@ describe('RootLayout Integration', () => {
         const themeProvider = screen.getByTestId('theme-provider-mock');
         expect(themeProvider).toBeInTheDocument();
 
-        // Verify Navbar is rendered within ThemeProvider
-        const navbar = screen.getByTestId('navbar-mock');
-        expect(navbar).toBeInTheDocument();
-        expect(themeProvider).toContainElement(navbar);
-
         // Verify children are rendered within ThemeProvider
         const children = screen.getByTestId('test-children');
         expect(children).toBeInTheDocument();
@@ -83,10 +78,8 @@ describe('RootLayout Integration', () => {
 
         // Check that both the navbar and children are within the theme provider
         const themeProvider = screen.getByTestId('theme-provider-mock');
-        const navbar = screen.getByTestId('navbar-mock');
         const children = screen.getByTestId('theme-consumer');
 
-        expect(themeProvider).toContainElement(navbar);
         expect(themeProvider).toContainElement(children);
     });
 
