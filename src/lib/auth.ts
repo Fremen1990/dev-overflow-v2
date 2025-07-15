@@ -1,6 +1,6 @@
 import GithubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
 
-// import GoogleProvider from "next-auth/providers/google";
 import type {NextAuthOptions} from "next-auth"
 
 import ROUTES from "@/constants/routes";
@@ -12,10 +12,10 @@ export const authOptions: NextAuthOptions = {
             clientId: process.env.AUTH_GITHUB_ID,
             clientSecret: process.env.AUTH_GITHUB_SECRET,
         }),
-        // GoogleProvider({
-        //     clientId: process.env.GOOGLE_CLIENT_ID,
-        //     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        // })
+        GoogleProvider({
+            clientId: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        })
     ],
     callbacks: {
         async session({session}) {
