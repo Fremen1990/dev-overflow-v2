@@ -32,7 +32,7 @@ describe('Navbar', () => {
     it('renders the logo and site name', () => {
         render(<Navbar/>);
 
-        const logo = screen.getByTestId('next-image');
+        const logo = screen.getByAltText("Dev Overflow Logo")
         expect(logo).toBeInTheDocument();
         expect(logo).toHaveAttribute('src', '/images/site-logo.svg');
         expect(logo).toHaveAttribute('alt', 'Dev Overflow Logo');
