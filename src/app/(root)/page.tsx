@@ -1,7 +1,6 @@
 import {redirect} from "next/navigation"
 import {getServerSession} from "next-auth/next"
 
-import {Button} from "@/components/ui/button";
 import ROUTES from "@/constants/routes";
 import {authOptions} from "@/lib/auth";
 
@@ -15,10 +14,10 @@ export default async function Home() {
     }
 
     // Server action for sign out
-    async function handleSignOut() {
-        "use server"
-        redirect("/api/auth/signout")
-    }
+    // async function handleSignOut() {
+    //     "use server"
+    //     redirect("/api/auth/signout")
+    // }
 
     return (
         <>
@@ -44,11 +43,11 @@ export default async function Home() {
                 )
             }
 
-            {session && (
-                <form action={handleSignOut}>
-                    <Button type="submit">LOG OUT!!</Button>
-                </form>
-            )}
+            {/* {session && ( */}
+            {/*    <form action={handleSignOut}> */}
+            {/*        <Button type="submit">LOG OUT!!</Button> */}
+            {/*    </form> */}
+            {/* )} */}
 
         </>
 
