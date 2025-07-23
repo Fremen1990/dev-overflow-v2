@@ -37,6 +37,13 @@ const RootLayout = async ({
 
     return (
         <html lang="en" suppressHydrationWarning>
+        <head>
+            <link
+                rel="stylesheet"
+                type="text/css"
+                href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+            />
+        </head>
         <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
